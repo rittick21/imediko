@@ -19,348 +19,280 @@
     <title>iMediko</title>
   </head>
   <body>
+    <!-- **********************navbar here*************************** -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fs-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Login Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="patreg.html">Patient Reg.</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="docdesk.html">Patient Diagnosis</a></li>
+                <li><a class="dropdown-item" href="patchkup.html">Preliminary Checkup</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Prescription</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- **********************navbar here*************************** -->
+    
     <div class="container-fluid">
-      <div class="text-center"><h3>OPD Preliminary Checkup</h3></div>
+      <div class="text-center"><h3>General Examinations</h3></div>
       <div class="container maindiv">
         <form action="">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Patient ID</span>
-                <input type="text" class="form-control" placeholder="Patient ID" aria-label="pid" aria-describedby="addon-wrapping" readonly="">
-              </div>
-             </div>
-            
-            <div class="col-md-5">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Name</span>
-                <input type="text" class="form-control" placeholder="Name" aria-label="name" aria-describedby="addon-wrapping" readonly="true">
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Age</span>
-                <input type="text" class="form-control" placeholder="Age" aria-label="age" aria-describedby="addon-wrapping" readonly="true">
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Gender</span>
-                <input type="text" class="form-control" placeholder="Gender" aria-label="gender" aria-describedby="addon-wrapping" readonly="true">
-              </div>
-            </div>
-          </div>
-          <!-- ------------------------------------------------ -->
-          <div class="row">
-            <div class="col-md-5">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Complain</span>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>--select--</option>
-                  <option value="1">com 1</option>
-                  <option value="2">com 2</option>
-                  <option value="3">com 3</option>
-                  <option value="4">com 4</option>
-                  <option value="5">com 5</option>
-                  <option value="6">com 6</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-7">
-              <div class="input-group flex-nowrap">
-                <!-- <span class="input-group-text" id="addon-wrapping">with</span> -->
-                <button type="button" class="btn btn-secondary">with ></button>
-                <textarea class="form-control" placeholder="with" aria-label="with" aria-describedby="addon-wrapping"></textarea>
-              </div>
-            </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row frmhead"><p>General Examinations</p></div>
-          <!-- ----------------------------------------------- -->
-            <div class="row">
+          <div class="top">
+            <div class="row mt-1 position-relative">
               <div class="col-md-4">
+                <div class="row frmhead"><p>G/E Details</p>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex position-absolute top-0 end-0">
+                <div class="date_time">
+                  <div class="date">
+                    <p>Date</p>
+                    <input type="date">
+                  </div>
+                  <div class="time">
+                    <p>Time</p>
+                    <input type="time">
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- ----------------------------------------------- -->
+            <div class="row mt-1">
+              <div class="col-auto mt-3">
               <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">Pulse</span>
-                <input type="text" class="form-control" placeholder="0" aria-label="pulse" aria-describedby="addon-wrapping">
+                <input type="text" class="ip w-25" placeholder="0" aria-label="pulse" aria-describedby="addon-wrapping">
                 <span class="input-group-text" id="addon-wrapping">/min.</span>
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-auto mt-3">
               <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">Blood Pressure</span>
-                <input type="text" class="form-control" placeholder="0" aria-label="bp" aria-describedby="addon-wrapping">
+                <input type="text" class="ip w-25" placeholder="0" aria-label="bp" aria-describedby="addon-wrapping">
                 <span class="input-group-text" id="addon-wrapping">mm of Hg</span>
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-auto mt-3">
               <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">Tempareture</span>
-                <input type="text" class="form-control" placeholder="0" aria-label="temp" aria-describedby="addon-wrapping">
+                <input type="text" class="ip w-25" placeholder="0" aria-label="temp" aria-describedby="addon-wrapping">
                 <span class="input-group-text" id="addon-wrapping">&#8457</span>
               </div>
             </div>
             </div>
           <!-- ----------------------------------------------- -->
-          <div class="row">
-            <div class="col-auto">
+          <div class="row mt-4">
+            <div class="col-auto mt-3">
               <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">Icterus &nbsp&nbsp&nbsp</span>
                 <div class="d-flex justify-content-between radiodiv">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_1" id="flexRadioDefault1"  checked>
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      option 1
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_1" id="flexRadioDefault2">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      option 2
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_1" id="flexRadioDefault3">
-                    <label class="form-check-label" for="flexRadioDefault3">
-                      option 3
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_1" id="flexRadioDefault4">
-                    <label class="form-check-label" for="flexRadioDefault4">
-                      option 4
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_1" id="flexRadioDefault5">
-                    <label class="form-check-label" for="flexRadioDefault5">
-                      option 5
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_1" id="flexRadioDefault6">
-                    <label class="form-check-label" for="flexRadioDefault6">
-                      option 6
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_1" id="flexRadioDefault7">
-                    <label class="form-check-label" for="flexRadioDefault7">
-                      option 7
-                    </label>
-                  </div>
-                  <!-- ------- -->
+                  <select class="icterus" name="" id="">
+                    <option selected>--Nil--</option>
+                    <option value="2">Option 1</option>
+                    <option value="3">Option 2</option>
+                    <option value="4">Option 3</option>
+                    <option value="5">Option 4</option>
+                    <option value="6">Option 5</option>
+                    <option value="7">Option 6</option>
+                  </select>
                 </div>
               </div>
-            </div>            
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row">
-            <div class="col-auto">
+            </div>
+            <div class="col-auto mt-3">
               <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">Anaemia</span>
                 <div class="d-flex justify-content-between radiodiv">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_2" id="flexRadioDefault1"  checked>
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      option 1
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_2" id="flexRadioDefault2">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      option 2
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_2" id="flexRadioDefault3">
-                    <label class="form-check-label" for="flexRadioDefault3">
-                      option 3
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_2" id="flexRadioDefault4">
-                    <label class="form-check-label" for="flexRadioDefault4">
-                      option 4
-                    </label>
-                  </div>
+                  <select class="anaemia" name="" id="">
+                    <option selected>--Nil--</option>
+                    <option value="2">Option 1</option>
+                    <option value="3">Option 2</option>
+                    <option value="4">Option 3</option>
+                    <option value="5">Option 4</option>
+                    <option value="6">Option 5</option>
+                    <option value="7">Option 6</option>
+                  </select>
                   <!-- ------- -->
                 </div>
               </div>
-            </div>            
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row">
-            <div class="col-auto">
+            </div>
+            <div class="col-auto mt-3">
               <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">Cyanosis</span>
                 <div class="d-flex justify-content-between radiodiv">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_3" id="flexRadioDefault1"  checked>
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      option 1
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_3" id="flexRadioDefault2">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      option 2
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_3" id="flexRadioDefault3">
-                    <label class="form-check-label" for="flexRadioDefault3">
-                      option 3
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_3" id="flexRadioDefault4">
-                    <label class="form-check-label" for="flexRadioDefault4">
-                      option 4
-                    </label>
-                  </div>
-                  <!-- ------- -->
-                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault_3" id="flexRadioDefault5">
-                    <label class="form-check-label" for="flexRadioDefault5">
-                      option 5
-                    </label>
-                  </div>
-                  <!-- ------- -->
+                  <select class="cyanosis" name="" id="">
+                    <option selected>--Nil--</option>
+                    <option value="2">Option 1</option>
+                    <option value="3">Option 2</option>
+                    <option value="4">Option 3</option>
+                    <option value="5">Option 4</option>
+                    <option value="6">Option 5</option>
+                    <option value="7">Option 6</option>
+                  </select>                     
                 </div>
+              </div>
+            </div>
+            <div class="col-auto mt-3">
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">Juqular Vain Plus</span>
+                <input type="text" class="id w-25" placeholder="0" aria-label="jvp" aria-describedby="addon-wrapping">
+                <span class="input-group-text" id="addon-wrapping">/min</span>
+              </div>
+          </div>
+          <div class="col-auto mt-3">
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="addon-wrapping">Tonque</span>
+              <select class="tonque" name="" id="">
+                <option selected>--Nil--</option>
+                <option value="2">Option 1</option>
+                <option value="3">Option 2</option>
+                <option value="4">Option 3</option>
+                <option value="5">Option 4</option>
+                <option value="6">Option 5</option>
+                <option value="7">Option 6</option>
+              </select>
+            </div>
+          </div>
+          </div>
+          <!-- ----------------------------------------------- -->
+          <div class="row mt-4">
+            <div class="col-auto mt-3">
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">Pharynx</span>
+                <select class="pharynx" name="" id="">
+                  <option selected>--Nil--</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                  <option value="5">Option 5</option>
+                  <option value="6">Option 6</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-auto mt-3">
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">Tonsils</span>
+                <select class="tonsils" name="" id="">
+                  <option selected>--Nil--</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                  <option value="5">Option 5</option>
+                  <option value="6">Option 6</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-auto mt-3">
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">Oedema</span>
+                <select class="oedema" name="" id="">
+                  <option selected>--Nil--</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                  <option value="5">Option 5</option>
+                  <option value="6">Option 6</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-auto mt-3">
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">Clubbing</span>
+                <select class="clubbing" name="" id="">
+                  <option selected>--Nil--</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                  <option value="5">Option 5</option>
+                  <option value="6">Option 6</option>
+                </select>
               </div>
             </div>            
           </div>
           <!-- ----------------------------------------------- -->
-          <div class="row">
-            <div class="col-md-5">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Juqular Vain Plus</span>
-                <input type="text" class="form-control" placeholder="0" aria-label="jvp" aria-describedby="addon-wrapping">
-                <span class="input-group-text" id="addon-wrapping">/min</span>
-              </div>
-            </div>
-
-            <div class="col-md-7">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Tonque</span>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>--select--</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row">
-            <div class="col-md-4">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Pharynx</span>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>--select--</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-8">
-              <div class="input-group flex-nowrap">
-                <input type="text" class="form-control" placeholder="Pharynx" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row">
-            <div class="col-md-4">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Tonsils</span>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>--select--</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Oedema</span>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>--select--</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Clubbing</span>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>--select--</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-           <div class="row frmhead"><p>Other Informations</p></div>
-          <!-- ----------------------------------------------- -->
-          <div class="row">
-            <div class="col-md-3">
+          <div class="row mt-4">
+            <div class="col-auto mt-3">
               <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">Blood Group</span>
-                <input type="text" class="form-control" placeholder="Blood Group" aria-label="bldgrp" aria-describedby="addon-wrapping">
+                <select class="b_g" name="" id="">
+                  <option selected>--Nil--</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="AB">AB</option>
+                  <option value="O">O</option>
+                  <option value="O">Bombay..</option>
+                </select>
               </div>
              </div>
-
-             <div class="col-md-3">
+             <div class="col-auto mt-3">
               <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">RH Factor</span>
-                <input type="text" class="form-control" placeholder="RH Factor" aria-label="rhfactor" aria-describedby="addon-wrapping">
+                <select class="rh" name="" id="">
+                  <option selected>--Nil--</option>
+                  <option value="+">+/ Positive</option>
+                  <option value="-">-/ Negative</option>
+                </select>
               </div>
              </div>
           </div>
           <!-- ----------------------------------------------- -->
-          <div class="row">
-            <div class="col-12">
+          <div class="row mt-4">
+            <div class="col-auto mt-3">
               <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Past Specific Disease</span>
+                <span class="input-group-text" id="addon-wrapping">Lymph Nodes</span>
+                <select class="l_nodes" name="" id="">
+                  <option selected>--Nil--</option>
+                  <option value="neck">Neck</option>
+                  <option value="axilla">Axilla</option>
+                  <option value="groin">Groin</option>
+                </select>
+              </div>
+             </div>
+             <div class="col-auto mt-3">
+              <div class="input-group flex-wrap">
+                <select class="l_nodes_p" name="" id="">
+                  <option selected>--Nil--</option>
+                  <option value="palpable">Palpable</option>
+                  <option value="not palpable">Not Palpable</option>
+                </select>
+              </div>
+             </div>
+             <div class="d-grid gap-2 col-auto mt-3">
+              <button type="button" class="btn btn-primary" id="go">Go</button>
+            </div>
+            <div class="col-auto mt-3">
+              <input type="text" class="text_area" placeholder="Go details" aria-label="pstdisease" aria-describedby="addon-wrapping">
+            </div>
+          </div>
+          <div class="row mt-4 d-flex flex-wrap">
+            <div class="col-12 mt-3 mb-3">
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">Past History</span>
                 <input type="text" class="form-control" placeholder="Past Specific Disease" aria-label="pstdisease" aria-describedby="addon-wrapping">
               </div>
              </div>
@@ -369,50 +301,18 @@
            <div class="row">
             <div class="col-12">
               <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Notifiable Disease</span>
-                <input type="text" class="form-control" placeholder="Notifiable Disease" aria-label="ndisease" aria-describedby="addon-wrapping">
-              </div>
-             </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-           <div class="row">
-            <div class="col-12">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Other Allergy(if any)</span>
+                <span class="input-group-text" id="addon-wrapping">Any Other Info</span>
                 <input type="text" class="form-control" placeholder="Other Allergy(if any)" aria-label="othrallergy" aria-describedby="addon-wrapping">
               </div>
              </div>
           </div>
           <!-- ----------------------------------------------- -->
-           <div class="row">
-            <div class="col-12">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Drug Allergy(if any)</span>
-                <input type="text" class="form-control" placeholder="Drug Allergy(if any)" aria-label="drgallergy" aria-describedby="addon-wrapping">
-              </div>
-             </div>
+          <!-- button remaining -->
+          <div class="d-grid gap-2 col-12 mt-3">
+            <button class="btn btn-primary sub_btn" type="button">Save</button>
           </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row">
-            <div class="col-12">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Past History</span>
-                <input type="text" class="form-control" placeholder="Past History" aria-label="psthstry" aria-describedby="addon-wrapping">
-              </div>
-             </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row">
-            <div class="col-12">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Any Other Info</span>
-                <input type="text" class="form-control" placeholder="Any Other Info" aria-label="aoinfo" aria-describedby="addon-wrapping">
-              </div>
-             </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="d-grid gap-2 col-12 mx-auto">
-            <button class="btn btn-primary sub_btn" type="button">Submit</button>
+          <div class="d-grid gap-2 col-12 mt-3">
+            <button class="btn btn-primary sub_btn" type="button">Done</button>
           </div>
 
         </form>
@@ -435,5 +335,7 @@
     $('#datepicker').datepicker({autoclose:true});
     });
     </script>
+    <!-- Script for go function -->
+    <Script src="./JS/geDetails.js"></Script>
   </body>
 </html>

@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	border: none;
 }
 :root{
 	--trans: all .3s linear;
@@ -22,14 +23,13 @@ html{
 	user-select: none;
 }
 h1{
-	font-family: 'Righteous', cursive;
+	font-family: 'Poppins', cursive;
 	font-size: 8rem;
 }
 h3{
-	font-family: font-family: 'Righteous', cursive;
-	font-size: 4.5rem;
+	font-family:'Poppins', cursive;
+	font-size: 3.5rem;
 	margin: 2rem 0;
-	text-decoration: underline;
 }
 p{
 	font-family: 'Poppins', sans-serif;
@@ -57,17 +57,37 @@ p{
 	border-radius: .5rem;
 	text-transform: uppercase;
 }
+.navbar{
+	background: linear-gradient(45deg,rgba(176, 173, 249, 1.0),rgba(255, 255, 255, 1.0));
+}
+.navbar .navbar-toggler span{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: medium;
+}
 
 
 
-
-@media(max-width: 998px){
+@media(max-width: 1500px){
 	html{
 		font-size: 55%;
+	}
+	.col_gap{
+		margin-top: 1rem;
+	}
+	h3{
+		font-size: calc(4.5rem - 1rem);
 	}
 }
 @media(max-width: 768px){
 	html{
 		font-size: 45%;
+	}
+	.col_gap{
+		margin-top: 1rem;
+	}
+	h3{
+		font-size: calc(4.5rem - 2rem);
 	}
 }

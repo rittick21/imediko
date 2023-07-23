@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	border: none;
 }
 :root{
 	--trans: all .3s linear;
@@ -22,14 +23,13 @@ html{
 	user-select: none;
 }
 h1{
-	font-family: 'Righteous', cursive;
+	font-family: 'Poppins', cursive;
 	font-size: 8rem;
 }
 h3{
-	font-family: font-family: 'Righteous', cursive;
-	font-size: 4.5rem;
+	font-family: 'Poppins', cursive;
+	font-size: 3.5rem;
 	margin: 2rem 0;
-	text-decoration: underline;
 }
 p{
 	font-family: 'Poppins', sans-serif;
@@ -58,7 +58,7 @@ p{
 	text-transform: uppercase;
 }
 .frmhead p{
-	padding: 2rem 0 0 0;
+	padding: 0,5rem 0 0 0;
 	font-style: italic;
 	letter-spacing: .1rem;
 }
@@ -69,8 +69,163 @@ p{
 /* .radiodiv{
 	padding-left: 0;
 } */
-
-
+.top .row .col-md-4 .date_time{
+	display: flex;
+	justify-content:space-around;
+	flex-wrap: wrap;
+	width: 40vw;
+	padding: 8px 4px;
+}
+.top .row .col-md-4 .frmhead p{
+	font-size: 30px;
+}
+.top .row .col-md-4 .date_time .date, .time{
+	width: fit-content;
+	display: flex;
+}
+.top .row .col-md-4 .date_time .date p, .time p{
+	margin: 4px 9px;
+	font-size: medium;
+	font-weight: 600;
+}
+.top .row .col-md-4 .date_time .date input{
+	width: 10vw;
+	font-size: large;
+	border-radius: 4px;
+	text-align: center;
+}
+.top .row .col-md-4 .date_time .time input{
+	width: 4vw;
+	font-size: large;
+	border-radius: 4px;
+}
+.row .col-auto input{
+	width: 4vw;
+	text-align: center;
+	font-size: medium;
+}
+.row .col-auto .input-group .icterus, .anaemia, .cyanosis, .tonque, .pharynx, .tonsils, .oedema, .clubbing, .b_g, .rh, .l_nodes, .l_nodes_p{
+	width: 7vw;
+	font-size: large;
+}
+.mt-4{
+	display: flex;
+	justify-content: space-between;
+}
+.row .mt-3 .btn{
+	font-size: large;
+	height: 4.5vh;
+	width: 6vw;
+	text-align: center;
+	font-weight: 500;
+}
+.row .col-auto .text_area{
+	width: 30vw;
+	height: 10vh;
+	border-radius: 10px;
+}
+.navbar{
+	background: linear-gradient(45deg,rgba(176, 173, 249, 1.0),rgba(255, 255, 255, 1.0));
+}
+.navbar .navbar-toggler span{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: medium;
+}
+@media(max-width: 1000px){
+	.top .row .col-md-4 .date_time{
+	display: flex;
+	justify-content:space-around;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.top .row .col-md-4 .date_time .date input{
+	width: 60%;
+	font-size: small;
+	border-radius: 4px;
+}
+.top .row .col-md-4 .date_time .time input{
+	width: 60%;
+	font-size: small;
+	border-radius: 4px;
+	margin: 4px 0;
+}
+.top .row .col-md-4 .date_time .date p, .time p{
+	margin: 4px 9px;
+	font-size: small;
+	font-weight: 500;
+}
+}
+@media(max-width: 800px){
+	.row .col-auto .text_area{
+	width: 25vw;
+	height: 8vh;
+	border-radius: 10px;
+	font-size: small;
+}
+	.row .mt-3 .btn{
+	font-size: small;
+	height: fit-content;
+	width: fit-content;
+	text-align: center;
+	font-weight: 400;
+}
+	.row .col-auto .input-group{
+		width: fit-content;
+	}
+	.row .col-auto .input-group .tonque,.tonsils,.pharynx, .oedema, .clubbing, .b_g, .rh, .l_nodes, .l_nodes_p{
+		width: max-content;
+		height: 3.2vh;
+		font-size: small;
+	}
+	.row .col-auto{
+		margin-top: 2rem;
+	} 
+	.row .col-md-4 .input-group .id{
+		width: 20%;
+	}
+	.row .col-auto .input-group .icterus, .anaemia, .cyanosis{
+		width: max-content;
+		height: 3.2vh;
+		font-size: small;
+	}
+	.top .row .col-md-4 .date_time{
+	display: flex;
+	justify-content:space-around;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.top .row .col-md-4 .frmhead p{
+	font-size: calc(30px - 13px);
+}
+.top .row .col-md-4 .date_time .date input{
+	width: 60%;
+	font-size: small;
+	border-radius: 4px;
+}
+.top .row .col-md-4 .date_time .time input{
+	width: 40%;
+	font-size: small;
+	border-radius: 4px;
+}
+.top .row .col-md-4 .date_time .date p, .time p{
+	margin: 4px 9px;
+	font-size: small;
+	font-weight: 500;
+}
+.mt-1{
+	display: flex;
+	flex-wrap: wrap;
+}
+.mt-1 .col-md-4{
+	margin-top: 1rem;
+	width: fit-content;
+}
+.mt-1 .col-md-4 input{
+	width: 25% ;
+}
+}
 
 @media(max-width: 998px){
 	html{
@@ -79,6 +234,7 @@ p{
 /* 	.radiodiv{
 		display: block;
 	} */
+
 }
 @media(max-width: 768px){
 	html{
