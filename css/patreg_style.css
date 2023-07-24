@@ -82,7 +82,7 @@ p{
 .navbar .container-fluid .navbar-collapse ul li:hover{
 	background: rgb(150, 146, 252);
 	transition: 0.4s;
-	border-bottom: 1px solid black;
+	text-decoration: underline;
 }
 
 @media(max-width: 1500px){
