@@ -2,6 +2,8 @@
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
+			border: none;
+			font-family: 'Poppins', sans-serif;
 		}
 		html{
 			font-size: 62.5%;
@@ -76,7 +78,6 @@
 			transform: rotateZ(405deg) translate(-.8rem, -.3rem);
 		}
 		/* ------------------------------------------ */
-		.nav-list{}
 		.nav-item{
 			list-style: none;
 			margin: 2.5rem;
@@ -90,6 +91,13 @@
 			letter-spacing: .1rem;
 			position: relative;
 			padding: .3rem 0;
+		}
+		.navbar span{
+			position: absolute;
+			top: 20%;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
 		}
 
 		.nav-link::before, 
@@ -116,6 +124,82 @@
 			transform: scaleX(1);
 		}
 
+		/* my styles */
+
+		.container .row{
+			height: 30vh;
+			width: 40vw;
+			position: absolute;
+			top: 70%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.container .row{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-size: medium;
+		}
+		.container .row .col{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+		.container .row .col span{
+			font-size: 15px;
+			font-weight: 400;
+			background: transparent;
+			color: #fff;
+			border: none;
+		}
+		.container .row .col .or{
+			text-align: center;
+			color: black;
+			font-weight: 600;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.container .row .col input{
+			width: 100%;
+			text-align: center;
+			font-size: 13px;
+			margin: 0 4px;
+		}
+		.container .row .col .ip-submit{
+			height: 4vh;
+			border-radius: 4px;
+			background-color: #fff;
+			color: black;
+		}
+		.container .row .col .ip-submit:hover{
+			background-color: rgb(0, 0, 0);
+			color: #fff;
+			transition: 0.4s;
+		}
+		@media(max-width: 1000px){
+			.container .row{
+				width: max-content;
+			}
+			.container .row .col{
+				width: auto;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+			}
+			.container .row .col .ip-submit{
+				width: 12vw;
+				font-size: small;
+			}
+			.container .row .col input{
+				width: 100%;
+				text-align: center;
+				margin: 0 4px;
+			}
+		}
 		@media(max-width: 998px){
 			html{
 				font-size: 55%;
@@ -124,6 +208,15 @@
 		@media(max-width: 768px){
 			html{
 				font-size: 45%;
+			}
+			.navbar{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			.navbar span{
+				position: absolute;
+				top: 20%;
 			}
 		}
 

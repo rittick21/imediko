@@ -26,9 +26,9 @@ const placeValue = () => {
       }
     });
     if(x.length === 0 || y.length === 0){
-      text_box.innerHTML = 'Please enter valid details';
+      text_box.value = 'Please enter valid details';
   }else{
-      text_box.innerHTML = `${x} with ${y}`;
+      text_box.value = `${x} with ${y}`;
   }
   };
 

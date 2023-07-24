@@ -59,6 +59,7 @@ p{
 }
 .navbar{
 	background: linear-gradient(45deg,rgba(176, 173, 249, 1.0),rgba(255, 255, 255, 1.0));
+	font-size: large;
 }
 .navbar .navbar-toggler span{
 	display: flex;
@@ -66,8 +67,23 @@ p{
 	align-items: center;
 	font-size: medium;
 }
-
-
+.navbar .navbar-toggler:hover{
+	background: rgb(150, 146, 252);
+	transition: 0.3s;	
+}
+.navbar .navbar-toggler:hover{
+	background: rgb(150, 146, 252);
+	transition: 0.3s;	
+}
+.navbar .container-fluid .navbar-collapse ul li a{
+	color: black;
+	margin: 0 10px;
+}
+.navbar .container-fluid .navbar-collapse ul li:hover{
+	background: rgb(150, 146, 252);
+	transition: 0.4s;
+	border-bottom: 1px solid black;
+}
 
 @media(max-width: 1500px){
 	html{
@@ -89,5 +105,10 @@ p{
 	}
 	h3{
 		font-size: calc(4.5rem - 2rem);
+	}
+	.navbar{
+		font-size: small;
+		font-weight: 500;
+		text-decoration: none;
 	}
 }
