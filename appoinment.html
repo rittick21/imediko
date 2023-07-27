@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/appoinment.css" />
+  </head>
+  <body>
+    <div class="navigation">
+      <div class="logo inliner">
+        <img src="logo.png" class="inliner" />
+        <span class="name inliner"> imediko </span>
+        <div class="breadcrumbs">&nbsp;&nbsp;</div>
+      </div>
+      <div class="menuToggle inliner go-right onlyphone">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>
+      <div class="menu inliner go-right onlypc invisible">
+        <nav>
+          <a href="/" title=""
+            ><div class="menu-btn inliner active">Home</div></a
+          >
+          <a href="about" title="About Me"
+            ><div class="menu-btn inliner">About Me</div></a
+          >
+          <a href="services" title="Services"
+            ><div class="menu-btn inliner">Services</div></a
+          >
+          <a href="work" title="My Work"
+            ><div class="menu-btn inliner">My Work</div></a
+          >
+          <a href="blog" title="Blog"
+            ><div class="menu-btn inliner">Blog</div></a
+          >
+          <a href="contact" title="Contact Me"
+            ><div class="menu-btn inliner">Contact Me</div></a
+          >
+        </nav>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!-- --------------------------------------main container------------------------------------------------------------------------>
+    <div class="container">
+      <h1>Appoinment Details</h1>
+      <form action="#">
+        <div class="row1 row">
+          <div class="col">
+            <div class="date">
+              <label for="date">Date</label>
+              <input
+                type="date"
+                id="date_ip"
+                name="firstname"
+                placeholder="Patient Id"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="time">
+              <label for="time">Time</label>
+              <input
+                type="time"
+                id="time_ip"
+                name="lastname"
+                placeholder="Patient Email"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row2 row">
+          <div class="col">
+            <label for="fname">Patient Name:</label>
+          <input type="text" id="fname" name="firstname" placeholder="Name" />
+          </div>
+          <div class="col">
+            <label for="lname">Doctor Name:</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Gurdain Name"
+          />
+          </div>
+        </div>
+        <div class="row3 row">
+          <div class="col">
+            <label for="place">Appointment Place:</label>
+          <select id="a_p" name="">
+            <option selected>Nil</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          </div>
+          <div class="col">
+            <label for="lname">Appointment Date:</label>
+          <input
+            type="date"
+            id="lname"
+            name="lastname"
+            placeholder="Gurdain Name"
+          />
+          </div>
+          <div class="col">
+            <label for="lname">Appointment Time:</label>
+          <input
+            type="time"
+            id="lname"
+            name="lastname"
+            placeholder="Gurdain Name"
+          />
+          </div>
+        </div>
+
+        <input class="submit_btn" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+
+  <script src="https://use.fontawesome.com/742ca76364.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      //=====navigation
+      $(".menuToggle").click(function () {
+        var menu = $(".menu");
+        if (menu.hasClass("invisible")) {
+          $(".menuToggle i").toggleClass("fa-bars fa-times");
+          $(".menu").removeClass("invisible");
+          $(".menu").addClass("visible");
+          menu.show("slow");
+        }
+      });
+      $(document).mouseup(function (e) {
+        var menu = $(".menu");
+        if (!menu.is(e.target) && menu.has(e.target).length === 0) {
+          if (menu.hasClass("visible")) {
+            setTimeout(function () {
+              $(".menuToggle i").toggleClass("fa-times fa-bars");
+              $(".menu").removeClass("visible");
+              $(".menu").addClass("invisible");
+            }, 500);
+            menu.hide("slow");
+          }
+        }
+      });
+
+      //=====radindrops
+    });
+  </script>
+</html>

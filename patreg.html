@@ -1,318 +1,262 @@
-<!doctype html>
-<html lang="en" oncontextmenu="return false">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- ----------Font Awesome 6.3.0---------- -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- ------------------------ Google Fonts---------------------- -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kaushan+Script&family=Poppins:wght@500&family=Righteous&family=Roboto:wght@100&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <!-- ------------------------ Bootstrap Datepicker--------------------- -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-    <!-- ------------------------------------------------------------------------------------------------------------ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
     <link rel="stylesheet" href="./css/patreg_style.css">
-    <title>iMediko</title>
   </head>
   <body>
-    <!-- **********************navbar here*************************** -->
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Login Page</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="patreg.html">Patient Registration</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="docdesk.html">Patient Diagnosis</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="patchkup.html">Preliminary checkup</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Prescription</a>
-            </li>
-          </ul>
-        </div>
+    <div class="navigation">
+      <div class="logo inliner">
+        <img src="logo.png" class="inliner" />
+        <span class="name inliner"> imediko </span>
+        <div class="breadcrumbs">&nbsp;&nbsp;</div>
       </div>
-    </nav>
-
-    <!-- **********************navbar here*************************** -->
-    <div class="container-fluid text-center">
-      <h3>OPD Patient Registration</h3>
-      <div class="container maindiv">
-        <form action="">
-          <div class="row mt-3">
-            <div class="col-auto">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Patient ID</span>
-                <input type="text" class="form-control" placeholder="Patient ID" aria-label="patid" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-            
-            <div class="col-auto">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Date</span>
-                <input type="date" class="form-control" placeholder="Date" aria-label="pdate" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-
-            <div class="col-auto col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Appoinment Time</span>
-                <input type="time" class="form-control" placeholder="Date" aria-label="pdate" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-
-            <div class="col-md-4 col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Patient Email</span>
-                <input type="email" class="form-control" placeholder="Patient ID" aria-label="patid" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-          <!-- ------------------------------------------------ -->
-          <div class="row mt-3">
-            <div class="col-md-6">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Name</span>
-                <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-
-            <div class="col-md-6 col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Gurdian's Name</span>
-                <input type="text" class="form-control" placeholder="Gurdian's Name" aria-label="Gname" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row mt-3">
-            <div class="col-auto">
-              <div class="input-group date" id="datepicker">
-                <span class="input-group-text" id="addon-wrapping">DOB</span>
-                <input type="text" class="form-control" id="date"/>
-                <span class="input-group-append">
-                  <span class="input-group-text bg-light d-block">
-                    <i class="fa fa-calendar"></i>
-                  </span>
-                </span>
-              </div>
-            </div>
-
-            <div class="col-auto">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Age</span>
-                <input type="text" class="form-control" placeholder="Age" aria-label="Age" aria-describedby="addon-wrapping">
-                <span class="input-group-text" id="addon-wrapping">Years</span>
-              </div>
-            </div>
-
-            <div class="col-auto col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Gender</span>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>--select--</option>
-                  <option value="1">Male</option>
-                  <option value="2">Female</option>
-                  <option value="3">Other</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="col-auto col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Occupation</span>
-                <input type="text" class="form-control" placeholder="Occupation" aria-label="Occupation" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-          </div>
-          <!-- ------------------------------------------------ -->
-          <div class="row mt-3">
-            <div class="col-auto">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Marital Status</span>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>--select--</option>
-                  <option value="1">Single</option>
-                  <option value="2">Married</option>
-                  <option value="3">Widowed</option>
-                  <option value="3">Separated</option>
-                  <option value="3">Divorced</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="col-auto">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Spouse's Name</span>
-                <input type="text" class="form-control" placeholder="Spouse's Name" aria-label="spousename" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-
-            <div class="col-auto col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Monthly Income</span>
-                <input type="text" class="form-control" placeholder=&#8377 aria-label="income" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row mt-3">
-            <div class="col-md-7">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Current Address</span>
-                <input type="text" class="form-control" placeholder="Current Address" aria-label="caddress" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-
-            <div class="col-auto col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">City</span>
-                <input type="text" class="form-control" placeholder="City" aria-label="city" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-            
-            <div class="col-auto col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Pin</span>
-                <input type="text" class="form-control" placeholder="Pin" aria-label="pin" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row mt-3">
-            <div class="col-auto">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">District</span>
-                <input type="text" class="form-control" placeholder="District" aria-label="district" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-
-            <div class="col-auto">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">State</span>
-                <input type="text" class="form-control" placeholder="State" aria-label="state" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-            
-            <div class="col-auto col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Police Station</span>
-                <input type="text" class="form-control" placeholder="Police Station" aria-label="ps" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row mt-3">
-            <div class="col-md-7">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Parmanent Address</span>
-                <input type="text" class="form-control" placeholder="Parmanent Address" aria-label="paddress" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-
-            <div class="col-auto col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">City</span>
-                <input type="text" class="form-control" placeholder="City" aria-label="city" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-            
-            <div class="col-auto col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Pin</span>
-                <input type="text" class="form-control" placeholder="Pin" aria-label="pin" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row mt-3">
-            <div class="col-auto">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">District</span>
-                <input type="text" class="form-control" placeholder="District" aria-label="district" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-
-            <div class="col-auto">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">State</span>
-                <input type="text" class="form-control" placeholder="State" aria-label="state" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-            
-            <div class="col-auto col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Police Station</span>
-                <input type="text" class="form-control" placeholder="Police Station" aria-label="ps" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="row mt-3">
-            <div class="col-auto">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Department</span>
-                <input type="text" class="form-control" placeholder="Department" aria-label="Department" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-
-            <div class="col-auto">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Doctor</span>
-                <input type="text" class="form-control" placeholder="Doctor" aria-label="Doctor" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-            
-            <div class="col-auto col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Room No.</span>
-                <input type="text" class="form-control" placeholder="Room No." aria-label="rn" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-
-            <div class="col-auto col_gap">
-              <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Que No.</span>
-                <input type="text" class="form-control" placeholder="Que No." aria-label="qn" aria-describedby="addon-wrapping">
-              </div>
-            </div>
-          </div>
-          <!-- ----------------------------------------------- -->
-          <div class="d-grid gap-2 col-12 mx-auto mt-3">
-            <button class="btn btn-primary sub_btn" type="button">Submit</button>
-          </div>
-        </form>
+      <div class="menuToggle inliner go-right onlyphone">
+        <i class="fa fa-bars fa-2x"></i>
       </div>
+      <div class="menu inliner go-right onlypc invisible">
+        <nav>
+          <a href="/" title=""
+            ><div class="menu-btn inliner active">Home</div></a
+          >
+          <a href="about" title="About Me"
+            ><div class="menu-btn inliner">About Me</div></a
+          >
+          <a href="services" title="Services"
+            ><div class="menu-btn inliner">Services</div></a
+          >
+          <a href="work" title="My Work"
+            ><div class="menu-btn inliner">My Work</div></a
+          >
+          <a href="blog" title="Blog"
+            ><div class="menu-btn inliner">Blog</div></a
+          >
+          <a href="contact" title="Contact Me"
+            ><div class="menu-btn inliner">Contact Me</div></a
+          >
+        </nav>
+      </div>
+      <div class="clearfix"></div>
     </div>
-    
-    <!-- ================================================================================== -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Optional JavaScript; choose one of the two! -->
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <!--------------------------- main container----------------------------------------------------------->
+
+    <div class="container">
+      <h1>ODP Patient Registration</h1>
+      <form action="#">
+        <div class="row1 row">
+          <label for="fname">Patient Id</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Patient Id"
+          />
+
+          <label for="lname">Patient Email</label>
+          <input
+            type="email"
+            id="lname"
+            name="lastname"
+            placeholder="Patient Email"
+          />
+          <label for="fname">Contact No</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Contact No"
+          />
+
+          <!-- <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select> -->
+        </div>
+        <div class="row2 row">
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Name" />
+
+          <label for="lname">Gurdain Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Gurdain Name"
+          />
+        </div>
+        <div class="row3 row">
+          <label for="lname">DOB:</label>
+          <input
+            type="date"
+            id="lname"
+            name="lastname"
+            placeholder="Gurdain Name"
+          />
+          <label for="lname">Age:</label>
+          <input
+            type="number"
+            id="lname"
+            name="lastname"
+            placeholder="Your age"
+          />
+          <label for="country">Gender</label>
+          <select id="gender" name="gender">
+            <option selected>------Nil------</option>
+            <option value="male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select>
+          <label for="lname">Occupation</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Gurdain Name"
+          />
+        </div>
+        <div class="row4 row">
+          <label for="country">Maritial Status</label>
+          <select id="gender" name="gender">
+            <option selected>------Nil------</option>
+            <option value="male">Single</option>
+            <option value="Female">Married</option>
+          </select>
+          <label for="lname">Spouse's Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Spouse's Name"
+          />
+          <label for="lname">Monthly Income</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Monthly Income"
+          />
+        </div>
+        <div class="row5 row">
+          <label for="lname">Current Address</label>
+          <input
+            type="text"
+            id="ca"
+            name="lastname"
+            placeholder="Current Address"
+          />
+          <label for="lname">City</label>
+          <input type="text" id="lname" name="lastname" placeholder="City" />
+          <label for="lname">Pin</label>
+          <input type="text" id="lname" name="lastname" placeholder="Pin" />
+          <label for="lname">District</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="District"
+          />
+          <label for="lname">State</label>
+          <input type="text" id="lname" name="lastname" placeholder="State" />
+          <label for="lname">Police Station</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Police Station"
+          />
+        </div>
+        <div class="row5 row">
+          <label for="lname">Permanent Address</label>
+          <input
+            type="text"
+            id="ca"
+            name="lastname"
+            placeholder="Current Address"
+          />
+          <label for="lname">City</label>
+          <input type="text" id="lname" name="lastname" placeholder="City" />
+          <label for="lname">Pin</label>
+          <input type="text" id="lname" name="lastname" placeholder="Pin" />
+          <label for="lname">District</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="District"
+          />
+          <label for="lname">State</label>
+          <input type="text" id="lname" name="lastname" placeholder="State" />
+          <label for="lname">Police Station</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Police Station"
+          />
+        </div>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
     <script>
-    $(function(){
-    $('#datepicker').datepicker({autoclose:true});
-    });
+      const theBody = document.querySelector("body");
+      const openNav = document.querySelector(".menu-bar button");
+      const closeNav = document.querySelector(".close-nav button");
+      const Navbar = document.querySelector(".navbar");
+
+      // function bodyScroll(){
+      //     if(Navbar.classList.contains('show')){
+      //         theBody.classList.add('hide-scroll');
+      //     }
+      //     else if(theBody.classList.contains('hide-scroll')){
+      //         theBody.classList.remove('hide-scroll');
+      //     }
+      // }
+
+      function showHide() {
+        Navbar.classList.toggle("show");
+        // bodyScroll();
+      }
+
+      openNav.onclick = showHide;
+      closeNav.onclick = showHide;
     </script>
   </body>
+  <script src="https://use.fontawesome.com/742ca76364.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      //=====navigation
+      $(".menuToggle").click(function () {
+        var menu = $(".menu");
+        if (menu.hasClass("invisible")) {
+          $(".menuToggle i").toggleClass("fa-bars fa-times");
+          $(".menu").removeClass("invisible");
+          $(".menu").addClass("visible");
+          menu.show("slow");
+        }
+      });
+      $(document).mouseup(function (e) {
+        var menu = $(".menu");
+        if (!menu.is(e.target) && menu.has(e.target).length === 0) {
+          if (menu.hasClass("visible")) {
+            setTimeout(function () {
+              $(".menuToggle i").toggleClass("fa-times fa-bars");
+              $(".menu").removeClass("visible");
+              $(".menu").addClass("invisible");
+            }, 500);
+            menu.hide("slow");
+          }
+        }
+      });
+
+      //=====radindrops
+    });
+  </script>
 </html>
